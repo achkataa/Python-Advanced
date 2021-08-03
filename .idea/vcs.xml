@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Gui_Shop" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Lists As Stacks and Queues" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Multidimensional Lists" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Tuples And Sets" vcs="Git" />
   </component>
 </project>
