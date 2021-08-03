@@ -1,0 +1,1 @@
+valid_domain_extensions = ("com", "bg", "org", "net")

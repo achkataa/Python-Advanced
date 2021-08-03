@@ -34,6 +34,7 @@ def buy_product(button):
             file.write(json.dumps(current_product_as_dict))
             file.write("\n")
 
+
     render_products()
 
 
@@ -56,6 +57,8 @@ def render_products():
 
             button = Button(tk, text=f"Buy {current_product.get('id')}")
             button.configure(command=lambda b=button: buy_product(b))
-            button.grid(row=3, column=counter)
+            button.grid(row=4, column=counter)
             Label(text=f"Count: {current_product.get('count')}").grid(row=2, column=counter)
+            Label(text=f"Price: {current_product.get('price')}$").grid(row=3, column=counter)
             counter += 1
+    Button(tk, text="Checkout", bg="blue", fg="white").grid(row=5, column=1, padx=10, pady=10)

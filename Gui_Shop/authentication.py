@@ -24,11 +24,13 @@ def login(username, password):
 
 def render_login(erros=None):
     clean_screen()
+    Label(text="Username").grid(row=0, column=0)
     username = Entry(tk)
-    username.grid(row=0, column=0)
-    password = Entry(tk)
-    password.grid(row=1, column=0)
-    Button(tk, text="Enter", command=lambda: login(username=username.get(), password=password.get())).grid(row=2, column=0)
+    username.grid(row=0, column=1)
+    Label(text="Password").grid(row=1, column=0)
+    password = Entry(tk, show="*")
+    password.grid(row=1, column=1)
+    Button(tk, text="Enter", command=lambda: login(username=username.get(), password=password.get())).grid(row=2, column=1)
 
     if erros:
         Label(tk, text="Invalid username or password").grid(row=3, column=0)
@@ -45,17 +47,23 @@ def register(**user):
         file.write(f"{user.get('username')}, {user.get('password')}")
         file.write("\n")
 
+    render_login()
+
 def render_register():
     clean_screen()
+    Label(text="Username").grid(row=0, column=0)
     username = Entry(tk)
-    username.grid(row=0, column=0)
+    username.grid(row=0, column=1)
+    Label(text="Password").grid(row=1, column=0)
     password = Entry(tk, show="*")
-    password.grid(row=1, column=0)
+    password.grid(row=1, column=1)
+    Label(text="First Name").grid(row=2, column=0)
     first_name = Entry(tk)
-    first_name.grid(row=2, column=0)
+    first_name.grid(row=2, column=1)
+    Label(text="Last Name").grid(row=3, column=0)
     last_name = Entry(tk)
-    last_name.grid(row=3, column=0)
-    Button(tk, text="Enter", command=lambda: register(username=username.get(), password=password.get(), first_name=first_name.get(), last_name=last_name.get())).grid(row=4, column=0)
+    last_name.grid(row=3, column=1)
+    Button(tk, text="Enter", command=lambda: register(username=username.get(), password=password.get(), first_name=first_name.get(), last_name=last_name.get())).grid(row=4, column=1)
 
 
 def render_main_enter_screen():
